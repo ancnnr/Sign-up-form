@@ -114,6 +114,11 @@ input {
 
 }
 
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid red;
+}
+
+
 button {
     background-color: var(--btn-color);
     color: white;
@@ -121,6 +126,12 @@ button {
     padding: 10px 25px;
     border-radius: 10px;
     margin-bottom: 50px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: grey;
+    cursor:default
 }
 
 .register-form p {
@@ -131,6 +142,17 @@ button {
 
 .register-form a {
     color: var(--btn-color);
+}
+
+.error {
+    color: red;
+    margin: 0;
+    padding: 0 50px;
+}
+
+#error-pw, #error-phone, #error-email {
+    display: none;
+    font-size: 1rem;
 }
 
 @font-face {
