@@ -1,0 +1,139 @@
+:root {
+    --btn-color: #596D48;
+    --in-brdr: #E5E7EB;
+    --main-width: clamp(800px, 60vw, 2048px);
+    
+}
+
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+}
+
+.header-left {
+    font-family: norse-bold;
+    height: 100vh;
+    width: calc(100vw - var(--main-width));
+    background-image: url("assets/halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 25vh;
+
+    background-color: rgba(0, 0, 0, 50%);
+    color: white;
+    font-size: 5rem;
+}
+
+
+.header img {
+    width: 100px;
+}
+
+.footer {
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.footer a {
+    
+    color: white;
+}
+
+.content-right {
+    background-color: white;
+    height: 100vh;
+    width: var(--main-width);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5%;
+}
+
+.description, .form-content h2, .form-row, .register-form p, .register-form button{
+    margin: 0 40px;
+}
+
+
+.form-content {
+    width: var(--main-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    box-shadow: 0 5px 15px black ;
+    gap: 20px;
+
+    margin-bottom: 50px;
+    padding: 50px 0;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 75px;
+}
+
+.form-item {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 5px;
+}
+
+
+input {
+    border: 1px solid var(--in-brdr);
+    border-radius: 5px;;
+
+    font-size: 1.5rem;
+    width: 300px;
+    height: 2rem;
+
+}
+
+button {
+    background-color: var(--btn-color);
+    color: white;
+    font-size: 2rem;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.register-form p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.register-form a {
+    color: var(--btn-color);
+}
+
+@font-face {
+    font-family: norse-bold;
+    src: url("./assets/norse-bold.otf") format("opentype");
+}
