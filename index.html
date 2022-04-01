@@ -43,27 +43,28 @@
                     <div class="form-item">
                         <label for="email">EMAIL</label>
                         <input type="email" name="email" id="email" placeholder="name@domain" required>
+                        <p class='error' id="error-email">
+                            Email format: a@a.com
+                        </p>
                     </div>
 
                     <div class="form-item">
                         <label for="phone">PHONE NUMBER</label>
                         <input type="text" name="phone" id="phone" placeholder="555-555-5555" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$">
+                        <p class='error' id="error-phone">
+                            Phone number: 555-555-5555
+                        </p>
                     </div>
-                </div>
-                <div class="error-row">
-                    <p class='error' id="error-email">
-                        Email format: a@a.com
-                    </p>
-                    <p class='error' id="error-phone">
-                        Phone number: 555-555-5555
-                    </p>
-                    
                 </div>
 
                 <div class="form-row">
                     <div class="form-item">
                         <label for="pass">PASSWORD</label>
                         <input type="password" name="pass" id="pass" minlength="8" required onkeyup="check_pass()">
+                        <p class='error' id="error-pw">
+                            <span id="error-pw-len"></span>
+                            <span id="error-pw-match"></span>
+                        </p>
                     </div>
 
                     <div class="form-item">
@@ -71,11 +72,7 @@
                         <input type="password" name="confirm-pass" id="confirm-pass" required onkeyup="check_pass()">
                     </div>
                 </div>
-                <div class="error-row">
-                    <p class='error' id="error-pw">
-                        Passwords must match and be at least 8 charachters in length
-                    </p>    
-                </div>
+
 
             </div>
 

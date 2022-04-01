@@ -89,7 +89,7 @@ body {
 .form-row {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     gap: 75px;
 }
 
@@ -101,6 +101,7 @@ body {
     align-items: flex-start;
 
     gap: 5px;
+
 }
 
 
@@ -117,6 +118,13 @@ input {
 input:not(:focus):not(:placeholder-shown):invalid {
     border: 1px solid red;
 }
+
+
+input:not(:focus):not(:placeholder-shown):invalid ~ #error-phone,
+input:not(:focus):not(:placeholder-shown):invalid ~ #error-email {
+    display: block;
+}
+
 
 
 button {
@@ -144,16 +152,20 @@ button:disabled {
     color: var(--btn-color);
 }
 
-.error {
+#error-pw, #error-email, #error-phone {
     color: red;
     margin: 0;
-    padding: 0 50px;
-}
-
-#error-pw, #error-phone, #error-email {
+    padding: 0;
     display: none;
     font-size: 1rem;
 }
+
+#error-pw {
+    width: 300px;
+    display: block;
+}
+
+
 
 @font-face {
     font-family: norse-bold;
